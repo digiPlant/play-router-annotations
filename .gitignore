@@ -1,3 +1,4 @@
 tmp
 .idea
 out
+*.pyc
