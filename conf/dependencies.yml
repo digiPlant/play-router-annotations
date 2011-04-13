@@ -1,0 +1,4 @@
+self: play -> router-annotations 1.0
+
+require:
+    - play

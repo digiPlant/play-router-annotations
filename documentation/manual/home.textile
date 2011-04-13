@@ -53,7 +53,7 @@ The following annotations are supported at class level:
 Examples:
 
 bc. @ServeStatic(value = "/public/", directory = "public")
-public class Application extends Controller {
+public class Application extends Controller { 
    ...
 }
 
@@ -61,7 +61,7 @@ bc. @StaticRoutes({
     @ServeStatic(value = "/public/", directory = "public"),
     @ServeStatic(value = "/images/", directory = "images")
 })
-public class Application extends Controller {
+public class Application extends Controller { 
    ...
 }
 
