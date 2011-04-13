@@ -1,5 +1,8 @@
 h1. Router Annotations
 
+Written by Nicolas Leroux.
+Improved by Leon Radley (digiPlant AB)
+
 h2. <a>Supported annotations</a>
 
 The router module allows you to embed your "routes":http://www.playframework.org/documentation/1.2/routes inside the controller. It provides a set of annotations to declare your "routes":http://www.playframework.org/documentation/1.2/routes next to your controller methods.
