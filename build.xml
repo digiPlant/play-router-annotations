@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="router-annotations" default="build" basedir=".">
+<project name="Router Annotations" default="build" basedir=".">
 
 	<property file="./build.properties" />
     
@@ -30,10 +30,10 @@
                 <include name="**/play.static"/>
             </fileset>
         </copy>
-        <jar destfile="lib/play-router-annotations.jar" basedir="tmp/classes">
+        <jar destfile="lib/router-annotations.jar" basedir="tmp/classes">
             <manifest>
                 <section name="Play-module">
-                    <attribute name="Specification-Title" value="router-annotations"/>
+                    <attribute name="Specification-Title" value="Router Annotations"/>
                 </section>
             </manifest>
         </jar>
@@ -42,7 +42,7 @@
 
     <target name="compile" depends="check">
         <mkdir dir="tmp/classes" />
-        <javac srcdir="src" destdir="tmp/classes" target="1.6" debug="true">
+        <javac srcdir="src" destdir="tmp/classes" target="1.5" debug="true">
             <classpath refid="project.classpath" />
         </javac>
     </target>

@@ -1,4 +1,6 @@
 tmp
 .idea
 out
+dist
+lib
 *.pyc

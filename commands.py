@@ -1,10 +1,10 @@
 # Here you can create play commands that are specific to the module, and extend existing commands
 
-MODULE = 'router-annotations'
+MODULE = 'router'
 
 # Commands that are specific to your module
 
-COMMANDS = ['router-annotations:hello']
+COMMANDS = ['router:hello']
 
 def execute(**kargs):
     command = kargs.get("command")
@@ -12,7 +12,7 @@ def execute(**kargs):
     args = kargs.get("args")
     env = kargs.get("env")
 
-    if command == "router-annotations:hello":
+    if command == "router:hello":
         print "~ Hello"
 
 

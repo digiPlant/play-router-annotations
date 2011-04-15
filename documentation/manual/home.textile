@@ -73,7 +73,7 @@ h2. <a>Enable the router module for the application</a>
 In the **/conf/dependencies.yml** file, enable the router module by adding this line:
 
 bc. # The router module
-- play -> router 1.0
+- play -> router head
 
 h2. <a>Issue tracking</a>
 

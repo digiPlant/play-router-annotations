@@ -1,4 +1,4 @@
-self: play -> router-annotations 1.0
+self: play -> router head
 
 require:
     - play
