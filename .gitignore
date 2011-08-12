@@ -1,6 +1,10 @@
+*~
+*.iml
 tmp
 .idea
 out
 dist
 lib
 *.pyc
+/target
+manifest

@@ -1,4 +1,4 @@
-self: play -> router 1.1
+self: play -> router 1.1-gsylvain35
 
 require:
     - play
