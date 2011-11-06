@@ -23,6 +23,11 @@ These annotations have the following attributes:
 
 **@Any** matches all the above HTTP methods.
 
+The following annotations provide grouping:
+
+* **@Posts**
+* **@Gets**
+
 p(note). Note that the path uses the same format described in "HTTP routing":http://www.playframework.org/documentation/1.2/routes
 
 Examples:
@@ -36,6 +41,14 @@ bc.  @Post("/login")
 public static void authenticate(String username, String password) throws Exception {
    ...
 }
+
+bc. @Posts({
+        @Post("/admin/myPosts/{id}"),
+        @Post("/admin/new")})
+public static void postForm(Long id) throws Exception {
+   ...
+}
+
 
 The following annotations are supported at class level:
 
