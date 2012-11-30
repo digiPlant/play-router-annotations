@@ -12,24 +12,14 @@ import java.util.List;
 
 public class RouterAnnotationsPlugin extends PlayPlugin {
 
-
     @Override
     public void detectChange() {
-        computeRoutes();
-    }
-
-    @Override
-    public void onConfigurationRead() {
+        Router.load(Play.ctxPath);
         computeRoutes();
     }
 
     @Override
     public void onRoutesLoaded() {
-        computeRoutes();
-    }
-
-    @Override
-    public void onApplicationStart() {
         computeRoutes();
     }
 
