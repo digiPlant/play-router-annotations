@@ -108,10 +108,10 @@ public class RouterAnnotationsPlugin extends PlayPlugin {
         for (Method option : options) {
             Options annotation = option.getAnnotation(Options.class);
             if (annotation != null) {
-                if (annotation.priority() != -1 && !routeExist("PUT", getControllerName(option) + "." + option.getName(), annotation.value())) {
-                    Router.addRoute(annotation.priority(), "PUT", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
+                if (annotation.priority() != -1 && !routeExist("OPTIONS", getControllerName(option) + "." + option.getName(), annotation.value())) {
+                    Router.addRoute(annotation.priority(), "OPTIONS", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
                 } else {
-                    Router.prependRoute("PUT", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
+                    Router.prependRoute("OPTIONS", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
                 }
             }
         }
