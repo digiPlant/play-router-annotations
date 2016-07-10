@@ -104,7 +104,17 @@ public class RouterAnnotationsPlugin extends PlayPlugin {
                 }
             }
         }
-
+        List<Method> options = Java.findAllAnnotatedMethods(controllerClasses, Options.class);
+        for (Method option : options) {
+            Options annotation = option.getAnnotation(Options.class);
+            if (annotation != null) {
+                if (annotation.priority() != -1 && !routeExist("PUT", getControllerName(option) + "." + option.getName(), annotation.value())) {
+                    Router.addRoute(annotation.priority(), "PUT", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
+                } else {
+                    Router.prependRoute("PUT", annotation.value(), getControllerName(option) + "." + option.getName(), getFormat(annotation.format()), annotation.accept());
+                }
+            }
+        }
         List<Method> deletes = Java.findAllAnnotatedMethods(controllerClasses, Delete.class);
         for (Method delete : deletes) {
             Delete annotation = delete.getAnnotation(Delete.class);
